@@ -8,9 +8,11 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { SearchComponent } from './search/search.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    CartViewComponent,
     CartComponent,
     UserProfileComponent,
     EditProfileComponent,
