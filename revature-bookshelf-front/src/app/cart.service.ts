@@ -4,6 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CartService {
+
+  cart: any = {}
+  cartCount = Object.keys(this.cart).length
+
   /*items: Book[] = [];
 
   addToCart(book: Book) {
