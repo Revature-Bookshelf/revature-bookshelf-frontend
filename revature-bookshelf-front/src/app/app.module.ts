@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CartComponent } from './cart/cart.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     CartViewComponent,
     CartComponent,
     UserProfileComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
