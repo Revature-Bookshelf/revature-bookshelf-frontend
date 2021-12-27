@@ -8,25 +8,21 @@ import { BooksService } from '../books.service';
 })
 export class BookListComponent implements OnInit {
 
-  books:Array<any>=[]
+  books: Array<any> = []
 
-  constructor(private booksService:BooksService) { }
+  constructor(private booksService: BooksService) { }
 
-  // ngOnInit(): void {
-  //   this.books=this.booksService.getBooks()
-  // }
-  
-    ngOnInit(): void {
+  ngOnInit(): void {
 
-      this.booksService.getBooks()
+    this.booksService.getBooks()
 
-      this.booksService.booksStream
-        .subscribe({
-          next:(e:any)=>{
-            let {action, books}=e;
-            this.books=books;
-          }
-        })
+    this.booksService.booksStream
+      .subscribe({
+        next: (e: any) => {
+          let { action, books } = e;
+          this.books = books;
+        }
+      })
 
   }
 }

@@ -8,20 +8,11 @@ import { BookViewComponent } from './book-view/book-view.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
-import { RouterModule, Routes } from "@angular/router";
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
-
-const routes: Routes = [
-  {path: '', pathMatch: "full", redirectTo: 'book-list/all' },
-  {path: 'book-list', pathMatch: "full", redirectTo: 'book-list/all' }
-];
 
 @NgModule({
   declarations: [
@@ -36,7 +27,7 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
