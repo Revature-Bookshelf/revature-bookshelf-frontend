@@ -16,9 +16,9 @@ import { RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
 
-  {path: '', pathMatch: "full", redirectTo: 'books' },
-  {path: 'books', pathMatch: "full", redirectTo: 'books' },
-  {path: 'available', pathMatch: "full", redirectTo: 'books/available'  }
+  { path: '', pathMatch: "full", redirectTo: 'books' },
+  { path: 'books', pathMatch: "full", redirectTo: 'books' },
+  { path: 'available', pathMatch: "full", redirectTo: 'books/available' }
 
 
 ];
@@ -36,7 +36,7 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
+    RouterModule,
     AppRoutingModule,
   ],
   providers: [],
