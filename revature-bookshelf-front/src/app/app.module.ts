@@ -13,15 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from "@angular/router";
-
-const routes: Routes = [
-
-  { path: '', pathMatch: "full", redirectTo: 'books' },
-  { path: 'books', pathMatch: "full", redirectTo: 'books' },
-  { path: 'available', pathMatch: "full", redirectTo: 'books/available' }
-
-
-];
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,6 +30,7 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

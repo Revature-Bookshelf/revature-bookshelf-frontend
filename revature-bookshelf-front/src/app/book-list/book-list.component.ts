@@ -14,26 +14,27 @@ export class BookListComponent implements OnInit {
   constructor(private booksService: BooksService, private router: Router) {
   }
 
+  selectedValue = "all";
 
-  ngOnInit(): void {
-    if (this.router.url == "/books") {
+
+  getBooks() {
+    if (this.selectedValue == "all") {
       this.booksService.getAllBooks().subscribe({
         next: (response: any) => {
           this.books = response
         }
       })
-    } else {
+    } else if (this.selectedValue == "available") {
       this.booksService.getAvailableBooks().subscribe({
         next: (response: any) => {
           this.books = response
         }
       })
     }
+  }
 
-
-
-
-
+  ngOnInit(): void {
+    this.getBooks();
   }
 
 
