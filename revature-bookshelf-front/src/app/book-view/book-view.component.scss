@@ -1,29 +1,63 @@
 
 
 
-
 .card-group{
-    max-width: 380px;
+    max-width: 400rem;
     display: inline-flex;
-    margin-left: 100px;
+    margin-left: 50px;
     margin-top: 30px;
 }
 
-.col-md-4{
-    padding: 5px;
+#mainBorder{
+    display: block;
+    min-width: 400px;
 }
 
-.img-view{
-    width: 130px; 
-    height: 240px; 
+#leftside{
     padding: 5px;
+    margin: auto;
+    max-width: 110px;
 }
 
-.card-title{
+
+
+#rightside{
+    margin: auto;
+}
+
+
+#bookTitle{
     background-color: blanchedalmond;
+    font-family: revature; 
+    display: inline;
+}
+
+#bookAuthor{
+    font-family: revature;
 }
 
 .card-text{
     font-family: revature; 
     font-size: medium;
 }
+
+#bookPrice{
+    font-family: revature;
+    background-color: lightgreen;
+    display: inline;
+    padding: 5px;
+}
+
+#cartButton{
+    margin-top: 20px;
+    font-family: revature;
+}
+
+.fa{
+    font-size: 15px;
+}
+
+#barcode{
+    color:black;
+}
+
