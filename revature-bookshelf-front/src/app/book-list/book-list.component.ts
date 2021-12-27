@@ -12,17 +12,22 @@ export class BookListComponent implements OnInit {
 
   constructor(private booksService: BooksService) { }
 
+
   ngOnInit(): void {
 
-    this.booksService.getBooks()
+    this.booksService.getAllBooks().subscribe({
+      next: (response: any) => {
+        this.books = response
+      }
+    })
 
-    this.booksService.booksStream
-      .subscribe({
-        next: (e: any) => {
-          let { action, books } = e;
-          this.books = books;
-        }
-      })
-
+    this.booksService.getAvailableBooks().subscribe({
+      next: (response: any) => {
+        this.books = response
+      }
+    })
   }
+
+
 }
+

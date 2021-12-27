@@ -8,6 +8,10 @@ import { HttpClient } from "@angular/common/http";
 })
 export class BooksService {
 
+  apiUrl= "http://localhost:8080/books";
+
+
+
   private books: Array<any> = []
 
 
@@ -17,14 +21,11 @@ export class BooksService {
     books: this.books
   });
 
-  getBooks() {
-    this.httpClient.get("http://localhost:8080/books")
-      .subscribe({
-        next: (response: any) => {
-          this.booksStream.next({
-            books: response
-          })
-        }
-      })
+  getAllBooks() {
+    return this.httpClient.get(this.apiUrl)
+  }
+
+  getAvailableBooks() {
+    return this.httpClient.get(`${this.apiUrl}/available`)
   }
 }
