@@ -3,18 +3,16 @@
 
 // Fonts
 @font-face {
-  font-family: "revature";
-  src: local("Futura-Std-Book.otf"),
-    url(./assets/fonts/Futura-Std-Book.otf) format("truetype");
+    font-family: "revature";
+    src: local("Futura-Std-Book.otf"),
+        url(./assets/fonts/Futura-Std-Book.otf) format("truetype");
 }
 
 html,
 body {
-  background-color: #ffffff;
-  color: #222;
-  font-size: 16px;
-  font-weight: 300;
-  text-rendering: optimizeLegibility;
+    background-color: #ffffff;
+    color: #222;
+    font-size: 16px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
 }
-
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
