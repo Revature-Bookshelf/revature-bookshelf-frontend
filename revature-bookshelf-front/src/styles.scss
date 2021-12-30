@@ -1,9 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-<<<<<<< Updated upstream
-@font-face {
-    font-family: "revature";
-    src: local("Futura-Std-Book.otf"), url(./assets/fonts/Futura-Std-Book.otf) format("truetype");
-=======
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Fonts
@@ -20,5 +15,4 @@ body {
   font-size: 16px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
->>>>>>> Stashed changes
 }
