@@ -13,8 +13,6 @@ import { CartAccessComponent } from './cart-access/cart-access.component';
 
 
 import { AppRoutingModule } from './app-routing.module';
-
-import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from "@angular/router";
 import { FormsModule } from '@angular/forms';
@@ -26,7 +24,7 @@ import { FormsModule } from '@angular/forms';
     UserProfileComponent,
     EditProfileComponent,
     SearchComponent,
-    CartAccessComponent
+    CartAccessComponent,
     BookListComponent,
     BookViewComponent
   ],

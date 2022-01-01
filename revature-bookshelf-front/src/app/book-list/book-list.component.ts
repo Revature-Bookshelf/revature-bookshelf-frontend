@@ -37,6 +37,5 @@ export class BookListComponent implements OnInit {
     this.getBooks();
   }
 
-
 }
 
