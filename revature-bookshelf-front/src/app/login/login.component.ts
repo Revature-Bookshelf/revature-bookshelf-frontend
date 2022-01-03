@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   message: string = "";
 
-  loginForm: FormGroup = this.fb.group({
+  loginForm: FormGroup = this.formBuilder.group({
     email: [''],
     password: ['']
   });
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     this.userService.doLogin(credentials)
   }
 
-  constructor(private fb: FormBuilder, private router: Router, private userService: UserService) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
     this.userService.userStream.subscribe({

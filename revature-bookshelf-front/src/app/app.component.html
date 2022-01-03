@@ -40,24 +40,30 @@
   </nav>
 
   <div class="container pt-5">
-    <div class="row">
+    <ng-container class="row">
       <h1 class="main-heading">
         Welcome to <br />
         Revature Bookshelf
       </h1>
-      <div class="col-sm-4">
-        <button type="button" class="btn btn-light btn-lg m-3" value="submit">
+      <ng-container class="col-sm-4" *ngIf="!isLoggedIn">
+        <a
+          type="button"
+          class="btn btn-light btn-lg m-3"
+          routerLinkActive="active"
+          [routerLink]="['/login']"
+          value="submit"
+        >
           Login
-        </button>
-        <button
+        </a>
+        <a
           type="button"
           class="btn btn-outline-light btn-lg m-3"
           value="submit"
         >
           Sign up
-        </button>
-      </div>
-    </div>
+        </a>
+      </ng-container>
+    </ng-container>
   </div>
 </header>
 
