@@ -11,6 +11,10 @@ import { UserService } from '../user.service';
 })
 export class LoginComponent implements OnInit {
 
+  // Popup form variables
+  // showModal: boolean;
+  // submitted = false;
+
   message: string = "";
 
   loginForm: FormGroup = this.formBuilder.group({
@@ -18,9 +22,21 @@ export class LoginComponent implements OnInit {
     password: ['']
   });
 
+  
+  // Used to show and hide popup login form
+  // showForm() {
+  //   this.showModal = true;
+  // }
+
+  // hideForm() {
+  //   this.showModal = false;
+  // }
+
   handleSubmit(event: Event) {
+
     let credentials = this.loginForm.value;
-    this.userService.doLogin(credentials)
+    this.userService.doLogin(credentials);
+    
   }
 
   constructor(private formBuilder: FormBuilder, private router: Router, private userService: UserService) { }
@@ -35,6 +51,6 @@ export class LoginComponent implements OnInit {
           this.message = "Invalid username and/or password"
         }
       }
-    })
+    });
   }
 }
