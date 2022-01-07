@@ -62,5 +62,19 @@ export class UserService {
         return token;
     }
 
+    doRegister(formData: any) {
+        formData.authorities = [
+          'ROLE_USER'
+        ]
+        this.httpClient.post("http://localhost:4200/bookshelf/user", formData)
+          .subscribe({
+            next: (response: any) => {
+              this.userStream.next({
+                action: "REGISTER_SUCCESS",
+              })
+            }
+          })
+      }
+
     constructor(private httpClient: HttpClient) {}
 }
