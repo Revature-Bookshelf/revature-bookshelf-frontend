@@ -14,6 +14,7 @@ import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from "@angular/router";
 import { FormsModule } from '@angular/forms';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     UserProfileComponent,
     EditProfileComponent,
     BookListComponent,
-    BookViewComponent
+    BookViewComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
